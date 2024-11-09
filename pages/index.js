@@ -14,6 +14,7 @@ export default function Home() {
     console.log(res.data);
     setQuizData(res.data);
   };
+console.log(currentQuestionIndex);
 
   const handleAnswerSubmit = async(answer, timeTaken) => {
     const currentQuestion = quizData.questions[currentQuestionIndex];
@@ -28,7 +29,6 @@ export default function Home() {
     if (currentQuestionIndex + 1 < quizData.questions.length) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      console.log("Submitted data: ", submitAnswer.data);
       setScore(submitAnswer.data);
     }
   }
@@ -47,7 +47,7 @@ export default function Home() {
             className="absolute top-0"
           />
           <div className="relative mt-28 bg-white w-full h-full rounded-t-3xl">
-            <div className="absolute top-[-48px] left-1/2 -translate-x-1/2 bg-white flex items-center justify-center w-24 h-24 rounded-full border-8 border-gray-100">
+            <div className="absolute top-[-48px] left-1/2 -translate-x-1/2 bg-white flex items-center justify-center w-24 h-24 rounded-full border-8 border-green-300">
               <div className="flex items-end space-x-1 text-black">
                 <span className="text-4xl font-bold">{currentQuestionIndex + 1}</span>
                 <span className="text-sm font-bold">/{quizData.questions.length}</span>

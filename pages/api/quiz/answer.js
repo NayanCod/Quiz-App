@@ -10,7 +10,6 @@ export default function questionAnswered(req, res) {
   if (req.method === "POST") {
     const { questionId, selectedOptions, timeTaken } = req.body;
     const question = questions.find((question) => question.id === questionId);
-    const { correct, inCorrect } = getCounters();
 
     if (!question) {
       return res.status(404).json({ message: "Question not found!" });
@@ -28,6 +27,7 @@ export default function questionAnswered(req, res) {
     const isLastQuestion = questions[questions.length - 1].id === questionId;
 
     if (isLastQuestion) {
+      const { correct, inCorrect } = getCounters();
       res.status(200).json({
         message: "Quiz completed!",
         totalCorrect: correct,
@@ -35,6 +35,7 @@ export default function questionAnswered(req, res) {
       });
       resetCounters();
     } else {
+      const { correct, inCorrect } = getCounters();
       res.status(200).json({
         message: isCorrect ? "Correct answer!" : "Incorrect answer!",
         correctCount: correct,
