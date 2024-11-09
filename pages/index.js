@@ -1,4 +1,5 @@
 import Question from "@/components/Question";
+import Score from "@/components/Score";
 import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
@@ -6,7 +7,7 @@ import { useState } from "react";
 export default function Home() {
   const [quizData, setQuizData] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [report, setReport] = useState(null);
+  const [score, setScore] = useState(null);
 
   const startQuiz = async () => {
     const res = await axios.post("/api/quiz/start");
@@ -28,8 +29,11 @@ export default function Home() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       console.log("Submitted data: ", submitAnswer.data);
+      setScore(submitAnswer.data);
     }
   }
+
+  if (score) return <Score data={score} />;
 
   if(quizData && currentQuestionIndex < quizData.questions.length){
     return (
