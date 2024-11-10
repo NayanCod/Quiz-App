@@ -6,18 +6,21 @@ export default function Question({ question, onSubmitAnswer }) {
   const [timeTaken, setTimeTaken] = useState(0);
   const [atleastSelect, setAtleaseSelect] = useState(false);
 
+  // Start the time taken in seconds
   useEffect(() => {
     setTimeTaken(0);
     const timer = setInterval(() => setTimeTaken((prev) => prev + 1), 1000);
     return () => clearInterval(timer);
   }, [question.id]);
 
+  // set the selectedOptions array on option select
   const handleOptionSelect = (index) => {
     setSelectedOptions((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
+  // handle the next button click
   const handleNextClick = () => {
     if (selectedOptions.length === 0) {
       setAtleaseSelect(true);
@@ -30,6 +33,7 @@ export default function Question({ question, onSubmitAnswer }) {
 
   return (
     <div className="mx-auto px-3">
+    {/* show error if no option select and clicked next button */}
       {atleastSelect ? (
         <p className="text-red-500 text-sm">
           Please select at least one option before proceeding.
@@ -65,6 +69,7 @@ export default function Question({ question, onSubmitAnswer }) {
             className="mx-auto h-auto"
           />
         )}
+        {/* display the questions's options */}
         {question.options.map((option, index) => (
           <p
             className={`text-lg md:text-sm cursor-pointer rounded-md mb-2 md:mb-1 px-4 py-6 flex gap-4 ${

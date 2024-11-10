@@ -1,4 +1,6 @@
 import {v4 as uuidv4} from 'uuid';
+
+// Dummy question array
 export const questions = [
     {
       id: '1',
@@ -67,6 +69,7 @@ export const questions = [
     }
 ];
 export default function startQuiz(req, res){
+  // only post req applied 
     if(req.method === 'POST'){
         const quizId = uuidv4();
         res.status(200).json({quizId: quizId, questions: questions});

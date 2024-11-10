@@ -1,9 +1,9 @@
 import Image from "next/image";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-export default function Report({ score, totalQuestion }) {
+export default function Score({ score, totalQuestion }) {
+  // calculate the score percenetage 
   const scorePercentage = (score.totalCorrect / totalQuestion) * 100;
 
   return (
@@ -47,6 +47,7 @@ export default function Report({ score, totalQuestion }) {
               })}
             />
           </div>
+          {/* reload the site when clicking on start again button */}
           <button
             onClick={() => window.location.reload()}
             className="absolute bottom-4 bg-[#FF3B3F] w-[90%] font-bold text-white rounded-full py-2 flex justify-center text-md items-center px-4"
