@@ -14,7 +14,6 @@ export default function Home() {
     console.log(res.data);
     setQuizData(res.data);
   };
-console.log(currentQuestionIndex);
 
   const handleAnswerSubmit = async(answer, timeTaken) => {
     const currentQuestion = quizData.questions[currentQuestionIndex];

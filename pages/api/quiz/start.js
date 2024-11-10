@@ -3,6 +3,7 @@ export const questions = [
     {
       id: '1',
       questionText: 'What is the main purpose of React?',
+      image: null,
       options: [
         'To build backend applications',
         'To manage data in a SQL database',
@@ -15,6 +16,7 @@ export const questions = [
     {
       id: '2',
       questionText: 'Which of the following is used to manage state in a React function component?',
+      image: null,
       options: [
         'this.setState',
         'useState',
@@ -26,19 +28,21 @@ export const questions = [
     },
     {
       id: '3',
-      questionText: 'Which lifecycle method is called only once in the component lifecycle?',
+      questionText: 'What is the process called when React compares Virtual DOM changes to the Real DOM?',
+      image: 'https://static.javatpoint.com/interview/images/react-interview-questions2.jpg',
       options: [
-        'componentWillReceiveProps',
-        'componentWillUnmount',
-        'componentDidUpdate',
-        'componentDidMount'
+        'Diffing',
+        'Reconciliation',
+        'Rendering',
+        'Hydration'
       ],
-      answer: [3],
+      answer: [1],
       type: 'single',
     },
     {
       id: '4',
       questionText: 'Which of the following statements about React hooks is correct?',
+      image: null,
       options: [
         'Hooks can be used in both class and function components',
         'Hooks must be called in the same order on every render',
@@ -51,6 +55,7 @@ export const questions = [
     {
       id: '5',
       questionText: 'Which of these are commonly used hooks in React? (Choose all that apply)',
+      image: null,
       options: [
         'useEffect',
         'useState',

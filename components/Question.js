@@ -30,11 +30,22 @@ export default function Question({ question, onSubmitAnswer }) {
 
   return (
     <div className="mx-auto px-3">
-    {atleastSelect ? <p className="text-red-500 text-sm">Please select at least one option before proceeding.</p> : null}
-      <h2 className="text-black font-bold text-md mb-4">
+      {atleastSelect ? (
+        <p className="text-red-500 text-sm">
+          Please select at least one option before proceeding.
+        </p>
+      ) : null}
+      <h2 className="text-black font-bold text-md mb-2">
         {question.questionText}
       </h2>
       <div className="h-[360px] overflow-y-auto scrollbar-none">
+      {question.image && (
+        <img
+          src={question?.image}
+          alt="Question illustration"
+          style={{ maxWidth: "100%", height: "auto", margin: "10px 0" }}
+        />
+      )}
         {question.options.map((option, index) => (
           <p
             className={`cursor-pointer rounded-md mb-1 px-4 py-6 flex gap-4 ${
@@ -45,9 +56,23 @@ export default function Question({ question, onSubmitAnswer }) {
             key={index}
             onClick={() => handleOptionSelect(index)}
           >
-          {
-            selectedOptions.includes(index) ? <Image src="/checked.png" alt="checkIcon" width={24} height={24} className="w-6 h-6"/> : <Image src="/unchecked.png" alt="checkIcon" width={24} height={24} className="w-6 h-6"/>
-          }
+            {selectedOptions.includes(index) ? (
+              <Image
+                src="/checked.png"
+                alt="checkIcon"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            ) : (
+              <Image
+                src="/unchecked.png"
+                alt="checkIcon"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+            )}
             {option}
           </p>
         ))}
