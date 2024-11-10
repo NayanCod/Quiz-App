@@ -17,19 +17,25 @@ npm -v
 ```
 
 ## Steps to run locally
+
+
 - **Clone the repository**
-git clone https://github.com/yourusername/quiz-app.git
+`git clone https://github.com/NayanCod/Quiz-App.git`
+
 
 - **Navigate to the Project Directory**
-cd quiz-app
+`cd quiz-app`
+
 
 - **Install Dependencies**
-npm install
+`npm install`
 If you encounter any errors during the installation, use the following command to install the dependencies with legacy peer dependencies:
-npm install --legacy-peer-deps
+`npm install --legacy-peer-deps`
+
 
 - **Start the Development Server**
-npm run dev
+`npm run dev`
+
 
 This will launch the project locally at http://localhost:3000
 
