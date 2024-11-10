@@ -28,13 +28,13 @@ export default function Score({ score, totalQuestion }) {
             </div>
           </div>
           <div className="bg-[#FF3B3F] bg-opacity-20 rounded-md my-2 px-4 py-4 flex gap-4">
-            <p className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center">
               <div className="w-5 h-5 bg-[#FF3B3F] rounded-full"></div>
               <div className="font-bold text-lg md: text-md">{score.totalIncorrect}</div>
               <div className="font-semibold text-gray-500 text-lg md:text-sm">
                 Incorrect
               </div>
-            </p>
+            </div>
           </div>
           <div className="m-4 w-40 h-40 md:w-32 md:h-32 mx-auto">
             <CircularProgressbar

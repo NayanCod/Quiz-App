@@ -12,7 +12,6 @@ export default function Home() {
   // make a post req on clicking start button
   const startQuiz = async () => {
     const res = await axios.post("/api/quiz/start");
-    console.log(res.data);
     setQuizData(res.data);
   };
 

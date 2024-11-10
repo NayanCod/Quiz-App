@@ -1,3 +1,6 @@
+# Quiz APP Live
+https://nayan-quiz-app.netlify.app
+
 # Quiz App - Local Setup Guide
 
 This guide will walk you through setting up and running the **Quiz App** API locally on your machine.
@@ -20,21 +23,31 @@ npm -v
 
 
 - **Clone the repository**
-`git clone https://github.com/NayanCod/Quiz-App.git`
+```bash
+git clone https://github.com/NayanCod/Quiz-App.git
+```
 
 
 - **Navigate to the Project Directory**
-`cd quiz-app`
+```bash
+cd quiz-app
+```
 
 
 - **Install Dependencies**
-`npm install`
+```bash
+npm install
+```
 If you encounter any errors during the installation, use the following command to install the dependencies with legacy peer dependencies:
-`npm install --legacy-peer-deps`
+```bash
+npm install --legacy-peer-deps
+````
 
 
 - **Start the Development Server**
-`npm run dev`
+```bash
+npm run dev
+```
 
 
 This will launch the project locally at http://localhost:3000
