@@ -32,7 +32,7 @@ export default function Home() {
     }
   }
 
-  if (score) return <Score data={score} />;
+  if (score) return <Score score={score} totalQuestion={quizData?.questions.length} />;
 
   if(quizData && currentQuestionIndex < quizData.questions.length){
     return (
