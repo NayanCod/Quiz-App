@@ -29,7 +29,7 @@ export const questions = [
     {
       id: '3',
       questionText: 'What is the process called when React compares Virtual DOM changes to the Real DOM?',
-      image: 'https://static.javatpoint.com/interview/images/react-interview-questions2.jpg',
+      image: '/q3.jpg',
       options: [
         'Diffing',
         'Reconciliation',

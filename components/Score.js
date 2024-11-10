@@ -6,7 +6,7 @@ export default function Report({ score, totalQuestion }) {
 
   return (
     <div className="h-screen w-screen bg-teal-900 flex justify-center items-center">
-      <div className="relative w-[360px] h-[640px] flex flex-col justify-between items-center bg-[#AF9CF3]">
+      <div className="relative w-full h-full md:w-[360px] md:h-[640px] flex flex-col justify-between items-center bg-[#AF9CF3]">
         <Image
           src="/decor.svg"
           alt="logo"
@@ -15,7 +15,7 @@ export default function Report({ score, totalQuestion }) {
           className="absolute top-0"
         />
         <div className="relative mt-28 bg-white w-full h-full rounded-t-3xl p-4">
-          <h2 className="text-center text-2xl font-semibold">Your Result</h2>
+          <h2 className="text-center text-4xl md:text-2xl font-semibold mb-3">Your Result</h2>
           <div className="m-4">
             <ProgressBar
               completed={scorePercentage}

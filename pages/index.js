@@ -37,7 +37,7 @@ export default function Home() {
   if(quizData && currentQuestionIndex < quizData.questions.length){
     return (
       <div className="h-screen w-screen bg-teal-900 flex justify-center items-center">
-        <div className="relative w-[360px] h-[640px] flex flex-col justify-between items-center bg-[#AF9CF3]">
+        <div className="relative w-full h-full md:w-[360px] md:h-[640px] flex flex-col justify-between items-center bg-[#AF9CF3]">
           <Image
             src="/decor.svg"
             alt="logo"
@@ -49,9 +49,10 @@ export default function Home() {
             <div className="absolute top-[-48px] left-1/2 -translate-x-1/2 bg-white flex items-center justify-center w-24 h-24 rounded-full border-8 border-green-300">
               <div className="flex items-end space-x-1 text-black">
                 <span className="text-4xl font-bold">{currentQuestionIndex + 1}</span>
-                <span className="text-sm font-bold">/{quizData.questions.length}</span>
+                <span className="text-gray-500 text-md font-bold">/{quizData.questions.length}</span>
               </div>
             </div>
+            
             <div className="w-full mt-14 px-2">
               <Question
                 question={quizData.questions[currentQuestionIndex]}
@@ -67,7 +68,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">
-      <div className="relative w-[360px] h-[640px] py-6 flex flex-col justify-between items-center bg-gradient-to-b from-[rgba(175,156,243,0)] to-[#AF9CF3] mix-blend-multiply">
+      <div className="relative w-full h-full md:w-[360px] md:h-[640px] py-6 flex flex-col justify-between items-center bg-gradient-to-b from-[rgba(175,156,243,0)] to-[#AF9CF3] mix-blend-multiply">
         <div>
           <Image src="/Frame.png" alt="company logo" width={120} height={120} />
         </div>

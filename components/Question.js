@@ -35,20 +35,39 @@ export default function Question({ question, onSubmitAnswer }) {
           Please select at least one option before proceeding.
         </p>
       ) : null}
-      <h2 className="text-black font-bold text-md mb-2">
+      <h2 className="text-black font-bold text-xl md:text-md mb-2">
         {question.questionText}
       </h2>
-      <div className="h-[360px] overflow-y-auto scrollbar-none">
-      {question.image && (
-        <img
-          src={question?.image}
-          alt="Question illustration"
-          style={{ maxWidth: "100%", height: "auto", margin: "10px 0" }}
-        />
-      )}
+      <div className="flex gap-1 my-1 items-center text-gray-600 font-semibold">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+        {timeTaken}s
+      </div>
+      <div className="md:h-[320px] pb-0 md:pb-6 overflow-y-auto scrollbar-none">
+        {question.image && (
+          <Image
+            src={question?.image}
+            alt="Question illustration"
+            width={250}
+            height={250}
+            className="mx-auto h-auto"
+          />
+        )}
         {question.options.map((option, index) => (
           <p
-            className={`cursor-pointer rounded-md mb-1 px-4 py-6 flex gap-4 ${
+            className={`text-lg md:text-sm cursor-pointer rounded-md mb-2 md:mb-1 px-4 py-6 flex gap-4 ${
               selectedOptions.includes(index)
                 ? "bg-white border-2 border-[#44B77B]"
                 : "bg-[#F3F4FA] border-2 border-[#F3F4FA] text-black"
