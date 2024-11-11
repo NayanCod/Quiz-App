@@ -52,3 +52,40 @@ npm run dev
 
 This will launch the project locally at http://localhost:3000
 
+# Running the Quiz App with Docker
+
+If you prefer to run the Quiz App within a Docker container, follow the instructions below.
+
+## Prerequisites
+
+Ensure Docker is installed on your machine. You can verify this by running:
+
+```bash
+docker -v
+```
+
+## Steps to Build and Run with Docker
+**Clone the Respository**
+```bash
+git clone https://github.com/NayanCod/Quiz-App.git
+```
+
+**Navigate to the Project Directory**
+```bash
+cd quiz-app
+```
+
+**Build the Docker Image Build the Docker image by running:**
+```bash
+docker build -t quiz-app .
+```
+
+**Run the Docker Container Start the container from the built image:**
+```bash
+docker run -p 3000:3000 quiz-app
+```
+
+The app should now be running inside a Docker container and accessible at http://localhost:3000.
+
+If 3000 is already allocated then use other port like 3001
+
