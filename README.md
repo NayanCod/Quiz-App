@@ -1,5 +1,5 @@
 # Quiz APP Live
-https://nayan-quiz-app.netlify.app
+Quiz app is deployed and live at https://nayan-quiz-app.netlify.app
 
 # Quiz App - Local Setup Guide
 
