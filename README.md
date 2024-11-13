@@ -75,12 +75,12 @@ git clone https://github.com/NayanCod/Quiz-App.git
 cd quiz-app
 ```
 
-**Build the Docker Image Build the Docker image by running:**
+**Build the Docker image by running:**
 ```bash
 docker build -t quiz-app .
 ```
 
-**Run the Docker Container Start the container from the built image:**
+**Start the container from the built image:**
 ```bash
 docker run -p 3000:3000 quiz-app
 ```
