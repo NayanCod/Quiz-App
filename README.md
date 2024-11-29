@@ -1,4 +1,4 @@
-# Quiz APP Live
+# Hosted URl
 Quiz app is deployed and live at https://nayan-quiz-app.netlify.app
 
 # Quiz App - Local Setup Guide
