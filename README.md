@@ -1,7 +1,7 @@
 # Hosted URl
 Quiz app is deployed and live at https://nayan-quiz-app.netlify.app
 
-# Quiz App - Local Setup Guide
+# Local Setup Guide
 
 This guide will walk you through setting up and running the **Quiz App** API locally on your machine.
 
@@ -52,7 +52,7 @@ npm run dev
 
 This will launch the project locally at http://localhost:3000
 
-# Running the Quiz App with Docker
+# Running the App with Docker
 
 If you prefer to run the Quiz App within a Docker container, follow the instructions below.
 
