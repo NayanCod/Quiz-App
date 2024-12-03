@@ -1,5 +1,5 @@
 # Hosted URl
-Quiz app is deployed and live at https://nayan-quiz-app.netlify.app
+Trivia app is deployed and live at https://nayan-quiz-app.netlify.app
 
 # Local Setup Guide
 
