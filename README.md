@@ -85,7 +85,4 @@ docker build -t quiz-app .
 docker run -p 3000:3000 quiz-app
 ```
 
-The app should now be running inside a Docker container and accessible at http://localhost:3000.
-
-If 3000 is already allocated then use other port like 3001
-
+The app should now be running inside a Docker container and accessible at http://localhost:3000
