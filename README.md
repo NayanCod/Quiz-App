@@ -3,7 +3,7 @@ Trivia app is deployed and live at https://nayan-quiz-app.netlify.app
 
 # Local Setup Guide
 
-This guide will walk you through setting up and running the **Quiz App** API locally on your machine.
+This guide will walk you through setting up and running the **Quiz App** locally on your machine.
 
 ## Prerequisites
 
